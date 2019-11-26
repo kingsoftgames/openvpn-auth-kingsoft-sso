@@ -28,10 +28,5 @@ mkdir -p build
 
 chmod 755 build/openvpn-auth-kingsoft-sso
 
-# Copy native library from GraalVM
-# https://github.com/oracle/graal/blob/master/substratevm/URL-PROTOCOLS.md
-# https://quarkus.io/guides/native-and-ssl-guide
-install "$GRAALVM_HOME/jre/lib/amd64/libsunec.so" build/
-
 install pkg/auth-kingsoft-sso.sh build/
 install --mode=644 pkg/auth-kingsoft-sso.conf build/

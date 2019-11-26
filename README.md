@@ -9,14 +9,15 @@ Built and tested on Ubuntu Server 18.04 LTS.
 
 ## Build
 
-1. Install [Apache Maven](https://maven.apache.org/)
+1. Install [Apache Maven](https://maven.apache.org/) (>= 3.6.1)
 
-2. Install [GraalVM and native-image](https://quarkus.io/guides/building-native-image-guide)
+2. Install [GraalVM and native-image](https://quarkus.io/guides/building-native-image-guide) (>= 19.3.0, Java 11)
 
 3. Run `build.sh`
 
     ```bash
     export GRAALVM_HOME=<GraalVM Install Dir>
+    export JAVA_HOME=$GRAALVM_HOME
     ./build.sh
     ```
 
