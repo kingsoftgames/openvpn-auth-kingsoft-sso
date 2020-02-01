@@ -22,6 +22,8 @@
     <fastjson.version>1.2.25</fastjson.version>
     <commons-io.version>2.5</commons-io.version>
     <commons-codec.version>1.10</commons-codec.version>
+    <graalvm.version>19.3.1</graalvm.version>
+    <graalvm.native-image.skip>false</graalvm.native-image.skip>
   </properties>
 
   <dependencies>
@@ -109,6 +111,32 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+          <groupId>org.graalvm.nativeimage</groupId>
+          <artifactId>native-image-maven-plugin</artifactId>
+          <version>${graalvm.version}</version>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>native-image</goal>
+                  </goals>
+                  <phase>package</phase>
+              </execution>
+          </executions>
+          <configuration>
+              <skip>${graalvm.native-image.skip}</skip>
+              <mainClass>${main.class}</mainClass>
+              <imageName>openvpn-auth-kingsoft-sso</imageName>
+              <buildArgs>
+                --no-server
+                --no-fallback
+                --report-unsupported-elements-at-runtime
+                --enable-https
+                --static
+              </buildArgs>
+          </configuration>
       </plugin>
     </plugins>
   </build>

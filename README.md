@@ -9,9 +9,9 @@ Built and tested on Ubuntu Server 18.04 LTS.
 
 ## Build
 
-1. Install [Apache Maven](https://maven.apache.org/) (>= 3.6.1)
+1. Install [Apache Maven](https://maven.apache.org/) (>= 3.6.3)
 
-2. Install [GraalVM and native-image](https://quarkus.io/guides/building-native-image-guide) (>= 19.3.0, Java 11)
+2. Install [GraalVM and native-image](https://quarkus.io/guides/building-native-image-guide) (>= 19.3.1, Java 11)
 
 3. Run `build.sh`
 
@@ -36,7 +36,6 @@ After build step, you need to deploy files in the `build` directory to the serve
     drwxr-xr-x 4 root root 4.0K Oct 29 17:44 ../
     -rw-r--r-- 1 root root  153 Oct 29 18:22 auth-kingsoft-sso.conf
     -rwxr-xr-x 1 root root  386 Oct 29 19:30 auth-kingsoft-sso.sh*
-    -rwxr-xr-x 1 root root 254K Oct 29 17:56 libsunec.so*
     -rwxr-xr-x 1 root root  22M Oct 29 17:56 openvpn-auth-kingsoft-sso*
     ```
 
