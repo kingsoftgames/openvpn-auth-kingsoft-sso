@@ -9,10 +9,10 @@ fi
 
 # Install `kms-sso-security` library to local Maven repository
 # https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html
-mvn initialize
+./mvnw initialize
 
 # Build native image
-mvn clean package
+./mvnw clean package
 
 # Create output directory
 mkdir -p build
