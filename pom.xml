@@ -20,7 +20,7 @@
 
     <kms-sso-security.version>1.2.0-SNAPSHOT</kms-sso-security.version>
     <fastjson.version>1.2.25</fastjson.version>
-    <commons-io.version>2.5</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
     <commons-codec.version>1.10</commons-codec.version>
     <graalvm.version>19.3.1</graalvm.version>
     <graalvm.native-image.skip>false</graalvm.native-image.skip>
